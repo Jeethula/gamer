@@ -43,8 +43,8 @@ const createGuestHouse = async(req, res) => {
             foodRequired,
             menuRequired,
             paymentDoneBy,
-            startDateTime: moment(startDateTime).format("YYYY-MM-DD HH:mm:ss"),
-            endDateTime: moment(endDateTime).format("YYYY-MM-DD HH:mm:ss"),
+          startDateTime: moment(startDateTime,"YYYY-MM-DD HH:mm:ss").format("YYYY-MM-DD HH:mm:ss"),
+            endDateTime: moment(endDateTime,"YYYY-MM-DD HH:mm:ss").format("YYYY-MM-DD HH:mm:ss"),
             noOfGuests,
             roomRequired,
             specialRequirements, // Assuming you want to set isapproved to false by default
