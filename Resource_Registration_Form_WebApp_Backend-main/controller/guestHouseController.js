@@ -117,6 +117,8 @@ const updateGuestHouse = async(req, res) => {
 
 const getGuestHouses = async(req, res) => {
     try {
+        console.log("pull")
+        
         const { name, date, isapproved, roomRequired } = req.query;
         const whereClause = {};
 
