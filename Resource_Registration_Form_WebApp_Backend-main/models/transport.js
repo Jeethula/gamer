@@ -131,9 +131,9 @@ const Transport = sequelize.define("Transport", {
         validate: {
             isDate: true,
         },
-        get() {
+       get() {
 
-            return moment.utc(this.getDataValue('travelDateTime')).local().format('YYYY-MM-DD HH:mm:ss');
+            return moment(this.getDataValue('travelDateTime'),"YYYY-MM-DD HH:mm:ss").format('YYYY-MM-DD HH:mm:ss');
         }
     },
     pickupLocation: {
