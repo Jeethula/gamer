@@ -54,8 +54,8 @@ const Seminar = sequelize.define("SeminarHall", {
     endDateTime: {
         type: DataTypes.DATE,
         allowNull: false,
-        get() {
-            return moment(this.getDataValue('endDateTime')).format('YYYY-MM-DD HH:mm:ss');
+       get() {
+            return moment(this.getDataValue('endDateTime'),"YYYY-MM-DD HH:mm:ss").format('YYYY-MM-DD HH:mm:ss');
         },
     },
     noOfAttendees: {
